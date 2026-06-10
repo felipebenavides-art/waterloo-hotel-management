@@ -940,6 +940,125 @@ section { position: relative; }
   flex-shrink: 0;
 }
 
+/* ── View customers button ───────────────────────── */
+.story-more-wrap {
+  text-align: center;
+  margin-top: 40px;
+}
+.btn-view-customers {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: transparent;
+  border: 1.5px solid rgba(26,58,92,0.22);
+  border-radius: 50px;
+  color: var(--primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  letter-spacing: -0.01em;
+}
+.btn-view-customers:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(26,58,92,0.18);
+}
+.btn-view-customers svg { flex-shrink: 0; }
+
+/* ── Customers modal ─────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,20,35,0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-overlay.is-open {
+  pointer-events: all;
+}
+.modal-content {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.45);
+  max-width: min(1100px, 95vw);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  background: rgba(13,31,51,0.08);
+  border: 1px solid rgba(13,31,51,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary);
+  transition: background var(--transition), transform var(--transition);
+  z-index: 1;
+}
+.modal-close:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: rotate(90deg);
+}
+.modal-header {
+  padding: 32px 40px 20px;
+  border-bottom: 1px solid rgba(26,58,92,0.08);
+}
+.modal-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.modal-title {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--primary);
+}
+.modal-img-wrap {
+  padding: 24px 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-bg);
+}
+.modal-img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 640px) {
+  .modal-header { padding: 24px 20px 16px; }
+  .modal-img-wrap { padding: 16px; }
+}
+
 /* ── Arch icon image variant ─────────────────────── */
 .arch-product-icon--img {
   background: transparent;

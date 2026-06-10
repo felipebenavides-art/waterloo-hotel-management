@@ -296,6 +296,37 @@ gsap.from('.btn-cta', {
   ease: 'back.out(1.8)',
 });
 
+/* ── Customers modal ─────────────────────────────── */
+(function () {
+  const overlay  = document.getElementById('customers-modal');
+  const content  = overlay.querySelector('.modal-content');
+  const closeBtn = document.getElementById('modal-close');
+
+  function openModal() {
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    gsap.fromTo(overlay,  { opacity: 0 },             { opacity: 1, duration: 0.3, ease: 'power2.out' });
+    gsap.fromTo(content,  { scale: 0.92, y: 24, opacity: 0 },
+                          { scale: 1,    y: 0,  opacity: 1, duration: 0.4, ease: 'back.out(1.6)' });
+  }
+
+  function closeModal() {
+    gsap.to(content,  { scale: 0.94, y: 16, opacity: 0, duration: 0.25, ease: 'power2.in' });
+    gsap.to(overlay,  { opacity: 0, duration: 0.28, ease: 'power2.in',
+      onComplete: () => {
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+        gsap.set([overlay, content], { clearProps: 'all' });
+      }
+    });
+  }
+
+  document.getElementById('view-customers-btn').addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeModal(); });
+})();
+
 /* ── Smooth anchor offset for sticky nav ─────────── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
