@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waterloo Hotel Management — Guest Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <div class="nav-logo-pill">
+          <img src="whml-logo.svg" class="nav-logo-whml" alt="Waterloo Hotel Management" />
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#personas">Our Guests</a>
+        <a href="#struggle">The Challenge</a>
+        <a href="#shift">The Solution</a>
+        <a href="#impact">Impact</a>
+        <a href="#success">Success Stories</a>
+        <a href="#architecture">Architecture</a>
+      </div>
+      <div class="nav-sf-badge">
+        <span class="nav-sf-text">Powered by</span>
+        <img src="salesforce-logo.svg" class="nav-sf-logo" alt="Salesforce" />
+      </div>
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-progress" id="nav-progress"></div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#personas">Our Guests</a>
+      <a href="#struggle">The Challenge</a>
+      <a href="#shift">The Solution</a>
+      <a href="#impact">Impact</a>
+      <a href="#success">Success Stories</a>
+      <a href="#architecture">Architecture</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Hospitality Intelligence</p>
+      <h1 class="hero-title">
+        Every Guest.<br/>
+        <span class="gradient-text">Every Moment.</span><br/>
+        Remembered.
+      </h1>
+      <p class="hero-sub">
+        Transform one-time visitors into lifelong advocates with AI-powered loyalty<br class="hide-mobile"/>
+        that knows your guests before they arrive.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#personas" class="btn-primary">See the Journey</a>
+        <a href="#impact" class="btn-ghost">View the Impact</a>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
+        <path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="#F8FAFE"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- PERSONAS -->
+  <section id="personas">
+    <div class="container">
+      <p class="section-eyebrow">The Voices in the Room</p>
+      <h2 class="section-title">The Leaders Asking<br/><span class="gradient-text">the Hard Questions</span></h2>
+      <p class="section-sub">Three perspectives. One shared frustration.</p>
+      <div class="personas-grid">
+
+        <div class="persona-card glass-card">
+          <div class="persona-avatar">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="40" fill="#1A3A5C" fill-opacity="0.12"/>
+              <circle cx="40" cy="32" r="14" stroke="#1A3A5C" stroke-width="1.5"/>
+              <path d="M14 72c0-14.359 11.640-26 26-26h0c14.359 0 26 11.641 26 26" stroke="#1A3A5C" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="persona-role">Scott McArdle</div>
+          <div class="persona-title">VP of Hospitality</div>
+          <blockquote class="persona-quote">
+            "We can't connect our loyalty data to our campaigns — every offer feels generic."
+          </blockquote>
+          <div class="persona-tag">Loyalty Operations</div>
+        </div>
+
+        <div class="persona-card glass-card">
+          <div class="persona-avatar persona-avatar--accent">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="40" fill="#00B4D8" fill-opacity="0.12"/>
+              <circle cx="40" cy="32" r="14" stroke="#00B4D8" stroke-width="1.5"/>
+              <path d="M14 72c0-14.359 11.640-26 26-26h0c14.359 0 26 11.641 26 26" stroke="#00B4D8" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="persona-role">James</div>
+          <div class="persona-title">Director of Guest Experience</div>
+          <blockquote class="persona-quote">
+            "Guests expect us to know them, but every stay feels like their first."
+          </blockquote>
+          <div class="persona-tag">Guest Experience</div>
+        </div>
+
+        <div class="persona-card glass-card">
+          <div class="persona-avatar persona-avatar--warm">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="40" fill="#C77D3A" fill-opacity="0.12"/>
+              <circle cx="40" cy="32" r="14" stroke="#C77D3A" stroke-width="1.5"/>
+              <path d="M14 72c0-14.359 11.640-26 26-26h0c14.359 0 26 11.641 26 26" stroke="#C77D3A" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="persona-role">Sofia</div>
+          <div class="persona-title">Revenue Manager</div>
+          <blockquote class="persona-quote">
+            "We're leaving repeat business on the table because we can't predict who's coming back."
+          </blockquote>
+          <div class="persona-tag">Revenue Strategy</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="section-wave-dark">
+      <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
+        <path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="#0D1F33"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- HOOK -->
+  <section id="hook">
+    <div class="container hook-inner">
+      <p class="section-eyebrow-light">The Tension</p>
+      <h2 class="hook-title">
+        Your guests are loyal.<br/>
+        <span class="gradient-text">Your systems aren't.</span>
+      </h2>
+      <p class="hook-sub">
+        Hotels invest millions in property, décor, and staff — but the moment a guest leaves,
+        their entire story disappears into disconnected spreadsheets and siloed platforms.
+        The next time they book? They're a stranger again.
+      </p>
+      <div class="hook-stats-row">
+        <div class="hook-stat">
+          <span class="hook-stat-num gradient-text">78%</span>
+          <span class="hook-stat-label">of consumers buy from brands that personalize</span>
+        </div>
+        <div class="hook-stat-divider"></div>
+        <div class="hook-stat">
+          <span class="hook-stat-num gradient-text">76%</span>
+          <span class="hook-stat-label">prefer spending on experiences over material items</span>
+        </div>
+        <div class="hook-stat-divider"></div>
+        <div class="hook-stat">
+          <span class="hook-stat-num gradient-text">?</span>
+          <span class="hook-stat-label">% of your guests feel truly recognized today</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-wave-light">
+      <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
+        <path d="M0,40 C480,0 960,80 1440,40 L1440,80 L0,80 Z" fill="#F8FAFE"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- STRUGGLE -->
+  <section id="struggle">
+    <div class="container">
+      <p class="section-eyebrow">Before the Shift</p>
+      <h2 class="section-title">Where the Experience<br/><span class="gradient-text">Breaks Down</span></h2>
+      <p class="section-sub">The gap between what guests expect and what teams can deliver today.</p>
+
+      <div class="struggle-grid">
+        <div class="struggle-card glass-card">
+          <div class="struggle-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <rect x="4" y="8" width="32" height="24" rx="3" stroke="#E05252" stroke-width="1.5"/>
+              <path d="M4 14h32" stroke="#E05252" stroke-width="1.5"/>
+              <path d="M14 20h12M14 25h8" stroke="#E05252" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="30" cy="30" r="6" fill="#E05252" fill-opacity="0.15" stroke="#E05252" stroke-width="1.5"/>
+              <path d="M30 27v4M30 33v.5" stroke="#E05252" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Siloed Guest Data</h3>
+          <p>PMS, POS, CRM, loyalty platform — none of them talk to each other. Scott's team manually exports CSVs to build campaigns that are outdated before they're sent.</p>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-label"><span>Data Connectivity</span><span class="progress-val">18%</span></div>
+            <div class="progress-bar-track"><div class="progress-bar-fill progress-bar--red" style="--target: 18%"></div></div>
+          </div>
+        </div>
+
+        <div class="struggle-card glass-card">
+          <div class="struggle-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="14" stroke="#E05252" stroke-width="1.5"/>
+              <path d="M20 12v8l6 3" stroke="#E05252" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8l24 24" stroke="#E05252" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Generic Campaigns</h3>
+          <p>Blast emails with no context. Anniversary guests get the same welcome offer as first-timers. James knows it's wrong — but the tools to fix it simply don't exist today.</p>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-label"><span>Campaign Relevance</span><span class="progress-val">22%</span></div>
+            <div class="progress-bar-track"><div class="progress-bar-fill progress-bar--red" style="--target: 22%"></div></div>
+          </div>
+        </div>
+
+        <div class="struggle-card glass-card">
+          <div class="struggle-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <path d="M8 32L16 18L22 24L28 14L32 20" stroke="#E05252" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="32" cy="20" r="3" stroke="#E05252" stroke-width="1.5"/>
+              <path d="M6 36h28" stroke="#E05252" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Zero Predictive Insight</h3>
+          <p>Sofia has no visibility into which loyalty members are at risk of churning or who's ripe for an upgrade. Revenue strategy is reactive, not predictive.</p>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-label"><span>Churn Prediction</span><span class="progress-val">9%</span></div>
+            <div class="progress-bar-track"><div class="progress-bar-fill progress-bar--red" style="--target: 9%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-wave-dark">
+      <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
+        <path d="M0,20 C360,80 1080,0 1440,60 L1440,80 L0,80 Z" fill="#0D1F33"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SHIFT -->
+  <section id="shift">
+    <div class="container">
+      <p class="section-eyebrow-light">The Turning Point</p>
+      <h2 class="shift-title">
+        AI That Knows Your<br/>
+        <span class="gradient-text">Guest Before They Arrive</span>
+      </h2>
+      <p class="shift-sub">
+        A unified guest intelligence platform — built for hospitality — that turns every touchpoint into a relationship moment.
+      </p>
+
+      <div class="shift-grid">
+        <div class="shift-card glass-card-dark">
+          <div class="shift-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="20" stroke="#00B4D8" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <circle cx="24" cy="18" r="7" stroke="#00B4D8" stroke-width="1.5"/>
+              <path d="M10 42c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="#00B4D8" stroke-width="1.5"/>
+              <path d="M32 14l3-3M32 22h3M36 18h3" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Unified Guest Profiles</h3>
+          <p>Every interaction — booking, spa visit, dining preference, complaint — stitched into one real-time profile. No more CSVs. No more guessing.</p>
+        </div>
+
+        <div class="shift-card glass-card-dark">
+          <div class="shift-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="10" width="32" height="28" rx="4" stroke="#00B4D8" stroke-width="1.5"/>
+              <path d="M16 24l6 6 10-12" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 18h32" stroke="#00B4D8" stroke-width="1.5"/>
+              <circle cx="14" cy="14" r="2" fill="#00B4D8"/>
+              <circle cx="20" cy="14" r="2" fill="#00B4D8" fill-opacity="0.5"/>
+            </svg>
+          </div>
+          <h3>Predictive Loyalty Journeys</h3>
+          <p>AI segments loyalty members by behavior, not just tier. Send the right experiential offer — room upgrade, chef's table, spa credit — at the right moment.</p>
+        </div>
+
+        <div class="shift-card glass-card-dark">
+          <div class="shift-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M10 36L18 22L26 30L34 16L40 24" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 40h32" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="10" cy="36" r="3" fill="#00B4D8" fill-opacity="0.3" stroke="#00B4D8" stroke-width="1.5"/>
+              <circle cx="40" cy="24" r="3" fill="#00B4D8" fill-opacity="0.3" stroke="#00B4D8" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Revenue Intelligence</h3>
+          <p>Sofia gets churn risk scores and return-probability models for every loyalty member — so she can intervene with a targeted win-back campaign before they book a competitor.</p>
+        </div>
+
+        <div class="shift-card glass-card-dark">
+          <div class="shift-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M24 8C15.163 8 8 15.163 8 24s7.163 16 16 16 16-7.163 16-16S32.837 8 24 8z" stroke="#00B4D8" stroke-width="1.5"/>
+              <path d="M24 16v8l5 5" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M34 10l4-4M38 14l3-3" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Real-Time Personalization</h3>
+          <p>From pre-arrival email to post-checkout survey, every message reflects what you actually know about that guest — their anniversary, their pillow preference, their favorite suite.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-wave-light">
+      <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
+        <path d="M0,60 C360,0 1080,80 1440,20 L1440,80 L0,80 Z" fill="#F8FAFE"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- RESOLUTION -->
+  <section id="resolution">
+    <div class="container">
+      <p class="section-eyebrow">After the Shift</p>
+      <h2 class="section-title">The Experience<br/><span class="gradient-text">They'll Talk About</span></h2>
+      <p class="section-sub">Same team. Same properties. A completely different story.</p>
+
+      <div class="resolution-grid">
+        <div class="resolution-card glass-card">
+          <div class="resolution-progress-row">
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-label"><span>Data Connectivity</span><span class="progress-val">94%</span></div>
+              <div class="progress-bar-track"><div class="progress-bar-fill progress-bar--green" style="--target: 94%"></div></div>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-label"><span>Campaign Relevance</span><span class="progress-val">89%</span></div>
+              <div class="progress-bar-track"><div class="progress-bar-fill progress-bar--green" style="--target: 89%"></div></div>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-label"><span>Churn Prediction</span><span class="progress-val">91%</span></div>
+              <div class="progress-bar-track"><div class="progress-bar-fill progress-bar--green" style="--target: 91%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resolution-quotes">
+          <div class="resolution-quote glass-card">
+            <div class="quote-avatar quote-avatar--blue">
+              <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="16" r="7" stroke="#1A3A5C" stroke-width="1.5"/><path d="M7 36c0-7.18 5.82-13 13-13s13 5.82 13 13" stroke="#1A3A5C" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <p class="quote-text">"For the first time, every campaign we send is backed by real guest behavior — open rates tripled in the first quarter."</p>
+              <p class="quote-attrib">Scott McArdle · VP of Hospitality</p>
+            </div>
+          </div>
+          <div class="resolution-quote glass-card">
+            <div class="quote-avatar quote-avatar--teal">
+              <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="16" r="7" stroke="#00B4D8" stroke-width="1.5"/><path d="M7 36c0-7.18 5.82-13 13-13s13 5.82 13 13" stroke="#00B4D8" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <p class="quote-text">"Guests now walk in and our team already knows their preferences. That's the hospitality we've always wanted to deliver."</p>
+              <p class="quote-attrib">James · Director of Guest Experience</p>
+            </div>
+          </div>
+          <div class="resolution-quote glass-card">
+            <div class="quote-avatar quote-avatar--warm">
+              <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="16" r="7" stroke="#C77D3A" stroke-width="1.5"/><path d="M7 36c0-7.18 5.82-13 13-13s13 5.82 13 13" stroke="#C77D3A" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <p class="quote-text">"We identified 400 at-risk loyalty members last month and retained 82% of them with a single targeted offer."</p>
+              <p class="quote-attrib">Sofia · Revenue Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-wave-dark">
+      <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
+        <path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="#0D1F33"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact">
+    <div class="container">
+      <p class="section-eyebrow-light">The Numbers</p>
+      <h2 class="impact-title">
+        Loyalty That<br/>
+        <span class="gradient-text">Moves the Needle</span>
+      </h2>
+      <p class="impact-sub">Industry benchmarks that become your competitive edge.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card glass-card-dark">
+          <div class="stat-number gradient-text" data-target="78" data-suffix="%">0%</div>
+          <p class="stat-label">of consumers purchase from brands that personalize their experience</p>
+          <div class="stat-source">Consumer Loyalty Research</div>
+        </div>
+        <div class="stat-card glass-card-dark">
+          <div class="stat-number gradient-text" data-target="50" data-suffix="%">0%</div>
+          <p class="stat-label">of customers purchase more frequently with experiential reward programs</p>
+          <div class="stat-source">Hospitality Loyalty Index</div>
+        </div>
+        <div class="stat-card glass-card-dark">
+          <div class="stat-number gradient-text" data-target="35" data-suffix="%">0%</div>
+          <p class="stat-label">of loyalty members are more likely to choose you over the competition</p>
+          <div class="stat-source">Brand Preference Study</div>
+        </div>
+        <div class="stat-card glass-card-dark">
+          <div class="stat-number gradient-text" data-target="52" data-suffix="%">0%</div>
+          <p class="stat-label">of loyalty members say experiential perks lead to higher retention</p>
+          <div class="stat-source">Retention Benchmark Report</div>
+        </div>
+        <div class="stat-card glass-card-dark stat-card--wide">
+          <div class="stat-number gradient-text" data-target="76" data-suffix="%">0%</div>
+          <p class="stat-label">of consumers prefer spending on experiences over material items</p>
+          <div class="stat-source">Experience Economy Report</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-wave-light">
+      <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
+        <path d="M0,20 C360,80 1080,0 1440,60 L1440,80 L0,80 Z" fill="#F8FAFE"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SUCCESS STORIES -->
+  <section id="success">
+    <div class="container">
+      <p class="section-eyebrow">Proof in the Industry</p>
+      <h2 class="section-title">Hotels Already<br/><span class="gradient-text">Making the Shift</span></h2>
+      <p class="section-sub">See how the world's leading hospitality brands transformed loyalty with the same platform.</p>
+
+      <div class="story-card glass-card">
+
+        <div class="story-header">
+          <div class="story-brand-info">
+            <div class="story-brand-header">
+              <img src="logo-wyndham.svg" class="story-brand-logo" alt="Wyndham Hotels &amp; Resorts" />
+              <div class="story-brand-name">Wyndham Hotels &amp; Resorts</div>
+            </div>
+            <div class="story-brand-meta">
+              <span class="story-meta-tag">9,000+ properties</span>
+              <span class="story-meta-tag">95 countries</span>
+              <span class="story-meta-tag">100M+ loyalty members</span>
+            </div>
+          </div>
+          <div class="story-sf-credit">
+            <span class="story-sf-label">Powered by</span>
+            <img src="salesforce-logo.svg" class="story-sf-logo" alt="Salesforce" />
+          </div>
+        </div>
+
+        <div class="story-pull-quote">
+          <div class="story-quote-mark">&ldquo;</div>
+          <blockquote class="story-blockquote">
+            Salesforce allows us to really elevate how we engage our members and meet them where they are in their journey with us.
+          </blockquote>
+          <p class="story-attrib">— Loyalty &amp; Marketing Leadership, Wyndham Hotels &amp; Resorts</p>
+          <a href="https://www.salesforce.com/customer-stories/wyndham/" target="_blank" rel="noopener" class="story-source-link">
+            Read full story on salesforce.com
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="story-body">
+          <div class="story-col">
+            <div class="story-col-label">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#E05252" stroke-width="1.5"/><path d="M9 5v5M9 12v.5" stroke="#E05252" stroke-width="1.5" stroke-linecap="round"/></svg>
+              The Challenge
+            </div>
+            <p>With over 100 million loyalty members across 9,000+ franchised properties, Wyndham couldn't deliver personalized experiences at scale. Guest data lived in disconnected systems — making it impossible to send relevant offers or identify members at risk of churning.</p>
+          </div>
+          <div class="story-col">
+            <div class="story-col-label">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#29A86E" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#29A86E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              The Solution
+            </div>
+            <p>Salesforce Marketing Cloud and Loyalty Management unified Wyndham's member data and powered personalized, behavior-driven campaigns — turning the world's largest hotel loyalty program into a precision marketing engine that meets each guest in their individual journey.</p>
+          </div>
+        </div>
+
+        <div class="story-metrics">
+          <div class="story-metric">
+            <span class="story-metric-num gradient-text">100M+</span>
+            <span class="story-metric-label">loyalty members reached through unified personalized campaigns</span>
+          </div>
+          <div class="story-metric-divider"></div>
+          <div class="story-metric">
+            <span class="story-metric-num gradient-text">9,000+</span>
+            <span class="story-metric-label">properties connected to a single guest intelligence platform</span>
+          </div>
+          <div class="story-metric-divider"></div>
+          <div class="story-metric">
+            <span class="story-metric-num gradient-text">95</span>
+            <span class="story-metric-label">countries operating on one unified loyalty and marketing system</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VIRGIN VOYAGES ─────────────────────────── -->
+      <div class="story-card glass-card" style="margin-top:28px">
+
+        <div class="story-header">
+          <div class="story-brand-info">
+            <div class="story-brand-header">
+              <img src="logo-virgin.svg" class="story-brand-logo story-brand-logo--portrait" alt="Virgin Voyages" />
+              <div class="story-brand-name">Virgin Voyages</div>
+            </div>
+            <div class="story-brand-meta">
+              <span class="story-meta-tag">Cruise line</span>
+              <span class="story-meta-tag">Travel &amp; Hospitality</span>
+              <span class="story-meta-tag">B2C &amp; Travel Agent</span>
+            </div>
+          </div>
+          <div class="story-sf-credit">
+            <span class="story-sf-label">Powered by</span>
+            <img src="salesforce-logo.svg" class="story-sf-logo" alt="Salesforce" />
+          </div>
+        </div>
+
+        <div class="story-pull-quote">
+          <div class="story-quote-mark">&ldquo;</div>
+          <blockquote class="story-blockquote">
+            Virgin Voyages makes waves with Salesforce — creating seamless experiences for travel agents and guests from first booking to final bow.
+          </blockquote>
+          <p class="story-attrib">— Salesforce Customer Story · Virgin Voyages</p>
+        </div>
+
+        <div class="story-body">
+          <div class="story-col">
+            <div class="story-col-label">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#E05252" stroke-width="1.5"/><path d="M9 5v5M9 12v.5" stroke="#E05252" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Key Achievements
+            </div>
+            <ul class="story-bullets">
+              <li>Created a seamless onboarding experience for Travel Agents with Partner Community Portals, Concierge Service, Knowledge and Live Agent</li>
+              <li>Integrated CRS into Salesforce for Travel Agent Bookings</li>
+              <li>Leveraging Email, Social and Journeys for B2C Marketing engagement with Sales Cloud</li>
+            </ul>
+          </div>
+          <div class="story-col">
+            <div class="story-col-label">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#29A86E" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#29A86E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Outcomes
+            </div>
+            <div class="story-outcomes">
+              <div class="story-outcome">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 16V4M4 10l6-6 6 6" stroke="#29A86E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="story-outcome-label">Bookings</span>
+              </div>
+              <div class="story-outcome">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 16V4M4 10l6-6 6 6" stroke="#29A86E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="story-outcome-label">CSAT</span>
+              </div>
+              <div class="story-outcome">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 16V4M4 10l6-6 6 6" stroke="#29A86E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="story-outcome-label">Engagement</span>
+              </div>
+            </div>
+            <div class="story-clouds">
+              <span class="story-cloud story-cloud--teal">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 9.5V5.5l4.5-3 4.5 3v4" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><rect x="4.5" y="7" width="4" height="2.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                Sales Cloud
+              </span>
+              <span class="story-cloud story-cloud--pink">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 2C4 2 2 4 2 6.5S4 11 6.5 11 11 9 11 6.5 9 2 6.5 2z" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 6.5c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z" fill="currentColor" fill-opacity=".3"/></svg>
+                Service Cloud
+              </span>
+              <span class="story-cloud story-cloud--orange">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 8.5l2-4 2 2 2-3 2 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.5" cy="4.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                Marketing Cloud
+              </span>
+              <span class="story-cloud story-cloud--purple">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6.5h5M6.5 4v5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                Community Cloud
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section id="architecture">
+    <div class="container">
+      <p class="section-eyebrow-light">The Platform</p>
+      <h2 class="arch-title">
+        Salesforce Agentic<br/>
+        <span class="gradient-text">Enterprise Architecture</span>
+      </h2>
+      <p class="arch-sub">
+        Four unified systems — engagement, agency, work, and context — powered by a trust layer
+        that puts AI to work across every guest interaction, at any scale.
+      </p>
+
+      <div class="arch-diagram">
+
+        <!-- ── ROW 1 · ENGAGEMENT ─────────────────── -->
+        <div class="arch-row arch-row--engagement">
+          <div class="arch-sys-label">
+            <span class="arch-sys-of">System of</span>
+            <span class="arch-sys-name">engagement</span>
+          </div>
+          <div class="arch-card">
+            <div class="arch-card-header">
+              <div class="arch-product-icon arch-product-icon--img">
+                <img src="logo-slack.svg" alt="Slack" />
+              </div>
+              <span class="arch-product-name">Slack</span>
+            </div>
+            <div class="arch-caps">
+              <span>Slackbot</span><span>Canvas</span><span>Enterprise Search</span>
+              <span>Messaging &amp; Huddles</span><span>Tableau Viz &amp; Data Q&amp;A</span>
+            </div>
+          </div>
+          <div class="arch-any">
+            <div class="arch-any-title">Any workspace</div>
+            <div class="arch-any-pills">
+              <span>MS Teams</span><span>ChatGPT</span><span>Claude</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── ROW 2 · AGENCY ─────────────────────── -->
+        <div class="arch-row arch-row--agency">
+          <div class="arch-sys-label">
+            <span class="arch-sys-of">System of</span>
+            <span class="arch-sys-name">agency</span>
+          </div>
+          <div class="arch-card">
+            <div class="arch-card-header">
+              <div class="arch-product-icon arch-product-icon--img arch-product-icon--agentforce">
+                <img src="logo-agentforce.png" alt="Agentforce" />
+              </div>
+              <span class="arch-product-name">Agentforce Customer &amp; Employee Agents</span>
+            </div>
+            <div class="arch-caps">
+              <span>Voice, Web, Mobile &amp; Messaging</span><span>Agentforce Script</span>
+              <span>Builder</span><span>Observability</span><span>Orchestration</span><span>Agent Fabric</span>
+            </div>
+          </div>
+          <div class="arch-any">
+            <div class="arch-any-title">Any agent</div>
+            <div class="arch-any-pills">
+              <span>MCP</span><span>A2A</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── ROW 3 · WORK ───────────────────────── -->
+        <div class="arch-row arch-row--work">
+          <div class="arch-sys-label">
+            <span class="arch-sys-of">System of</span>
+            <span class="arch-sys-name">work</span>
+          </div>
+          <div class="arch-card arch-card--work">
+            <div class="arch-card-header">
+              <div class="arch-product-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="#00B4D8" stroke-width="1.5"/>
+                  <path d="M12 6v3M12 15v3M6 12h3M15 12h3" stroke="#00B4D8" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="12" cy="12" r="2.5" fill="#00B4D8" fill-opacity=".4"/>
+                </svg>
+              </div>
+              <span class="arch-product-name">Customer 360</span>
+            </div>
+            <div class="arch-products-section">
+              <div class="arch-products-row-label">Clouds</div>
+              <div class="arch-products-grid">
+                <span class="arch-prod arch-prod--blue">Sales</span>
+                <span class="arch-prod arch-prod--pink">Customer Service</span>
+                <span class="arch-prod arch-prod--red">Field Service</span>
+                <span class="arch-prod arch-prod--purple">IT &amp; HR Service</span>
+                <span class="arch-prod arch-prod--teal">Contact Center</span>
+                <span class="arch-prod arch-prod--orange">Marketing</span>
+                <span class="arch-prod arch-prod--green">Commerce</span>
+                <span class="arch-prod arch-prod--navy">Supply Chain</span>
+                <span class="arch-prod arch-prod--blue">Revenue Mgmt</span>
+                <span class="arch-prod arch-prod--mid">Platform</span>
+              </div>
+              <div class="arch-products-row-label">Industries</div>
+              <div class="arch-products-grid">
+                <span class="arch-prod arch-prod--teal">Fin Serv</span>
+                <span class="arch-prod arch-prod--pink">Health &amp; Life Sciences</span>
+                <span class="arch-prod arch-prod--navy">PubSec</span>
+                <span class="arch-prod arch-prod--orange">Manufacturing</span>
+                <span class="arch-prod arch-prod--green">Consumer Goods</span>
+                <span class="arch-prod arch-prod--purple">Comms</span>
+                <span class="arch-prod arch-prod--red">Nonprofit</span>
+                <span class="arch-prod arch-prod--blue">Education</span>
+                <span class="arch-prod arch-prod--orange">Energy &amp; Utilities</span>
+                <span class="arch-prod arch-prod--mid">Media</span>
+              </div>
+            </div>
+          </div>
+          <div class="arch-any">
+            <div class="arch-any-title">Any app</div>
+            <div class="arch-any-pills">
+              <span>Oracle</span><span>Microsoft</span><span>Adobe</span>
+              <span>Google</span><span>SAP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── ROW 4 · CONTEXT ────────────────────── -->
+        <div class="arch-row arch-row--context">
+          <div class="arch-sys-label">
+            <span class="arch-sys-of">System of</span>
+            <span class="arch-sys-name">context</span>
+          </div>
+          <div class="arch-card">
+            <div class="arch-card-header">
+              <div class="arch-product-icon arch-product-icon--img arch-product-icon--wide">
+                <img src="logo-data360.png" alt="Data 360" />
+              </div>
+              <span class="arch-product-name">Data 360</span>
+            </div>
+            <div class="arch-caps">
+              <span>CDP</span><span>Federation</span><span>MuleSoft</span>
+              <span>Informatica</span><span>Tableau</span><span>Structured &amp; Unstructured</span>
+              <span>Zero Copy</span><span>Real-time</span>
+            </div>
+          </div>
+          <div class="arch-any">
+            <div class="arch-any-title">Any data lake or warehouse</div>
+            <div class="arch-any-pills">
+              <span>AWS</span><span>Snowflake</span><span>BigQuery</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.arch-diagram -->
+
+      <!-- ── TRUST LAYER ─────────────────────────── -->
+      <div class="arch-trust">
+        <div class="arch-trust-bar">
+          <div class="arch-trust-line"></div>
+          <span class="arch-trust-label">Trust layer</span>
+          <div class="arch-trust-line"></div>
+        </div>
+        <div class="arch-trust-models">
+          <div class="arch-trust-model">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="rgba(255,255,255,0.5)" stroke-width="1.2"/><path d="M6 12l1.5-4.5L9 10l1.5-2.5L12 12" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>OpenAI</span>
+          </div>
+          <div class="arch-trust-model">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3l1.8 5.4H16L11.3 11.5l1.8 5.5L9 14l-4.1 3 1.8-5.5L2 8.4h5.2L9 3z" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" fill="rgba(255,255,255,0.08)"/></svg>
+            <span>Anthropic</span>
+          </div>
+          <div class="arch-trust-model">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polygon points="9,2 16,14 2,14" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" fill="rgba(255,255,255,0.08)"/><line x1="9" y1="6" x2="9" y2="10" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <span>Gemini</span>
+          </div>
+          <div class="arch-trust-model">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="3" width="12" height="12" rx="3" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" fill="rgba(255,255,255,0.08)"/><path d="M6 9h6M6 12l2-6 1 3 1-2 2 5" stroke="rgba(255,255,255,0.6)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>LLaMA by Meta</span>
+          </div>
+          <div class="arch-trust-model">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6-6-2.686-6-6z" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" fill="rgba(255,255,255,0.08)"/><path d="M6 12c1-3 5-3 6 0" stroke="rgba(255,255,255,0.6)" stroke-width="1.1" stroke-linecap="round"/></svg>
+            <span>Mistral AI</span>
+          </div>
+          <div class="arch-trust-model">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 14V8l4-4 4 4v6" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linejoin="round" fill="rgba(255,255,255,0.08)"/><rect x="7" y="10" width="4" height="4" stroke="rgba(255,255,255,0.5)" stroke-width="1.1"/></svg>
+            <span>Open source</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="section-wave-light">
+      <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F8FAFE"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="container cta-inner">
+      <div class="cta-wave-bg">
+        <svg viewBox="0 0 800 120" preserveAspectRatio="none">
+          <path d="M0,60 Q200,10 400,60 T800,60 L800,120 L0,120 Z" fill="#00B4D8" fill-opacity="0.08"/>
+          <path d="M0,80 Q200,30 400,80 T800,80 L800,120 L0,120 Z" fill="#1A3A5C" fill-opacity="0.06"/>
+        </svg>
+      </div>
+      <p class="section-eyebrow">Ready?</p>
+      <h2 class="cta-title">
+        Start Knowing Your<br/>
+        <span class="gradient-text">Guests Again</span>
+      </h2>
+      <p class="cta-sub">
+        Let's map your current loyalty architecture to a future where<br class="hide-mobile"/>
+        every guest feels like your most valued member.
+      </p>
+      <button class="btn-cta" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        Let's Talk
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="cta-footer">
+        <span>Waterloo Hotel Management</span>
+        <span class="dot">·</span>
+        <span>Guest Intelligence Platform</span>
+        <span class="dot">·</span>
+        <span>Hospitality &amp; Loyalty</span>
+        <span class="dot">·</span>
+        <span class="cta-sf-wrap">
+          <span>Powered by</span>
+          <img src="salesforce-logo.svg" class="cta-sf-logo" alt="Salesforce" />
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
