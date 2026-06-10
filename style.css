@@ -1039,7 +1039,7 @@ section { position: relative; }
   color: var(--primary);
 }
 .modal-img-wrap {
-  padding: 24px 24px 28px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1048,10 +1048,10 @@ section { position: relative; }
 .modal-img {
   width: 100%;
   height: auto;
-  max-height: 60vh;
+  max-height: 85vh;
   object-fit: contain;
   display: block;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
 }
 
 @media (max-width: 640px) {
