@@ -754,7 +754,7 @@ section { position: relative; }
   text-transform: uppercase;
 }
 .nav-sf-logo {
-  height: 18px;
+  height: 22px;
   width: auto;
 }
 
@@ -830,12 +830,8 @@ section { position: relative; }
   color: var(--text-mid);
 }
 .story-sf-logo {
-  height: 28px;
+  height: 32px;
   width: auto;
-  background: var(--primary);
-  border-radius: 6px;
-  padding: 4px 8px;
-  box-sizing: content-box;
 }
 
 /* pull-quote stripe */
@@ -1294,14 +1290,10 @@ section { position: relative; }
   font-size: 0.8rem;
 }
 .cta-sf-logo {
-  height: 16px;
+  height: 20px;
   width: auto;
-  background: var(--primary);
-  border-radius: 3px;
-  padding: 2px 5px;
-  box-sizing: content-box;
   vertical-align: middle;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 /* ── Responsive 1024px ────────────────────────────── */
